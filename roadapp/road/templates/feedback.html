@@ -83,23 +83,19 @@
          color: #ff0000;
          }
          #second{display:none;}
+         h1,h2,h3{
+         font-family: 'Kaushan Script', cursive;
+         }
 </style>
 <body>
-    <div class="container">
-        <div class="row">
-			<div class="col-md-5 mx-auto">
-			<div id="first">
-				<div class="myform form ">
-					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center">
-							<h1>FEEDBACK</h1>
-						 </div>
-					</div>
+<<div class="card" style="width: 35rem;height:50rem;  left:35%;">
+  <div class="card-body">
+  	<h1>FEEDBACK</h1>
                    <form method="POST">
                    	{% csrf_token %}
                            <div class="form-group">
-                              <input type="text" name="disaster"  class="form-control" id="email" value="abc">
- <select name = "patient" onchange="sele(this.value)">
+                              <input type="text" name="disaster"  class="form-control" style="margin-top:35px; font-size: 30px" id="email" value="abc">
+ <select name = "patient" onchange="sele(this.value)" style="margin-top:5px; font-size: 30px">
    <option>select</option>
   <option  value=Earthquakes name='options' id='val'>Earthquakes</option>
   <option  value=Floods name='options' id='val'>Floods</option>
@@ -116,23 +112,25 @@ function sele(va){
 </script>
                            </div>
                            <div class="form-group">
-                              <label for="exampleInputEmail1">LONGITUDE</label>
-                              <input type="text" name="longitude" id="password"  value="{{lon}}" class="form-control">
+                              <label for="exampleInputEmail1" style="margin-top:5px; font-size: 30px">LONGITUDE:</label>
+                              <input type="text" name="longitude" id="password" style="margin-top:0px; font-size: 30px" value="{{lon}}" class="form-control">
                            </div>
                            
                            <div class="form-group">
-                              <label for="exampleInputEmail1">LATITUDE</label>
-                              <input type="text" name="latitude" id="longitude"  value="{{lat}}" class="form-control">
+                              <label for="exampleInputEmail1" style="margin-top:5px; font-size: 30px">LATITUDE:</label>
+                              <input type="text" name="latitude" id="longitude" style="margin-top:5px; font-size: 30px" value="{{lat}}" class="form-control">
                            </div>
 
                            <div class="form-group">
-                              <label for="exampleInputEmail1">NAME</label>
-                              <input type="text" name="name"  class="form-control">
+                              <label for="exampleInputEmail1" style="margin-top:5px; font-size: 30px">NAME:</label>
+                              <input type="text" name="name" style="margin-top:5px; font-size: 30px"  class="form-control">
                            </div>
 
                            <div class="col-md-12 text-center mb-3">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Update</button>
+                              <button type="submit"  class=" btn btn-block mybtn btn-primary tx-tfm">Update</button>
          </div>
      </form>
+ </div>
+</div>
 </body>
 </html>
